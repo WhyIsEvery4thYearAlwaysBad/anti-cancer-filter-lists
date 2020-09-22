@@ -1,0 +1,39 @@
+! Title: Anti-Trash Reddit
+! Version: 17September2020v1-Beta
+! Expires: 3 days
+! Description: A filter list that tries its best to make reddit as good as it can look.
+! Pretty sure any trending section on any website is gonna suck.
+reddit.com###TrendingPostsContainer
+! Up and downvotes are a bad way to rate a post, considering how braindead most reddit users are.
+reddit.com##div[id^="vote-arrows"]
+reddit.com##.Post:style(padding-left: 0 !important)
+reddit.com##.Comment:style(padding-left: 20px !important)
+! Awards are incorrectly used and a scam.
+reddit.com##span[id^="PostAwardBadges"]
+reddit.com##span:has-text(Give Award):upward(1)
+! subreddit blacklist.
+! Anything political or journalistic - A hell storm.
+! Meme subreddits - Most of them suck.
+! r/anime - A hivemind.
+! r/worldpolitics - READ: r/worldporn. It got overrun by porn, and it is disguisting.
+! r/bangtan - Members become Cancer.
+! r/teenagers - CRINGE.
+! r/pics - Too broad.
+! r/mildly<blank> - Lifeless.
+! All the official subreddits
+reddit.com##a[data-click-id="subreddit"]:has-text(/politic|news|r\/(pics|mildly|nextfuckinglevel|meme|anime|worldpolitics)/im):upward(Post):upward(2)
+||reddit.com/r/worldporn^
+! Content blocking
+! If you're gonna make memes, at least make good ones.
+reddit.com##a[href*="flair_name" i][href*="meme" i]:upward(.Post):upward(2)
+! r/gaming
+! No cosplays, girl/boyfriends, or kids! Creeps.
+reddit.com##h3:has-text(/cosplay|him|her|wife|husband|(girl|boy)friend|just\s*(play|got)|found\s*my|unpopular\s*opinion/im):upward(.Post):upward(2)
+! r/tf2
+! Ok we get it, you hate being censored as a f2p.
+reddit.com##span:has-text(/((can'?t|cannot)?.*(text|voice)?(?= chat).*(unavailable)?)/im):upward(.Post):upward(2)
+! Loadout posts get old quick.
+reddit.com##a[href="/r/tf2/?f=flair_name%3A%22Loadout%22"]:upward(.Post):upward(2)
+! Comment Blacklist
+! Anything jojo is annoying.
+reddit.com##div[data-test-id="comment"]:has-text(/jojo/im)
