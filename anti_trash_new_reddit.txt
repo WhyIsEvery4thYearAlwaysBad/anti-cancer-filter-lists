@@ -4,14 +4,22 @@
 ! Description: A filter list that tries its best to make reddit as good as it can look.
 ! Pretty sure any trending section on any website is gonna suck.
 reddit.com###TrendingPostsContainer
-! Up and downvotes are a bad way to rate a post, considering how braindead most reddit users are.
+! Up and downvotes are a bad way to rate a post considering how braindead most reddit users are.
+reddit.com##span:has-text(/(\d+) point/i)
+reddit.com##span:has-text(/ upvoted/i)
 reddit.com##div[id^="vote-arrows"]
 reddit.com##.Post:style(padding-left: 0 !important)
 reddit.com##.Comment:style(padding-left: 20px !important)
 ! Awards are incorrectly used and a scam.
+reddit.com##.icon-addGildDashed:upward(div)
 reddit.com##span[id^="PostAwardBadges"]
-reddit.com##span:has-text(Give Award):upward(1)
-! subreddit blacklist.
+reddit.com##button:has-text(Give Award)
+||redditstatic.com/*/awards
+||redd.it/award_images
+||redditstatic.com/desktop2x/AwardTooltip.*.js
+! Why not just moderate for a subreddit you like?
+reddit.com##a[href^="/r/SubredditAdoption" i]:upward(2):remove()
+! Subreddit blacklist.
 ! Anything political or journalistic - A hell storm.
 ! Meme subreddits - Most of them suck.
 ! r/anime - A hivemind.
