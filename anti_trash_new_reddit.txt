@@ -29,8 +29,8 @@ reddit.com##a[href^="/r/SubredditAdoption" i]:upward(2):remove()
 ! r/pics - Too broad.
 ! r/mildly<blank> - Lifeless.
 ! All the official subreddits
-reddit.com##a[data-click-id="subreddit"]:has-text(/politic|news|r\/(pics|mildly|nextfuckinglevel|meme|anime|worldpolitics)/im):upward(Post):upward(2)
-||reddit.com/r/worldporn^
+reddit.com##a[data-click-id="subreddit"]:has-text(/politic|news|r\/(pics|mildly|nextfuckinglevel|meme|anime|worldpolitics)/im):upward(.Post):upward(2)
+||reddit.com/r/worldporn^$document,domain=~ Raided and is now full of porn.
 ! Content blocking
 ! If you're gonna make memes, at least make good ones.
 reddit.com##a[href*="flair_name" i][href*="meme" i]:upward(.Post):upward(2)
