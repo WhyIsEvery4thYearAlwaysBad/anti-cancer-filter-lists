@@ -1,40 +1,56 @@
-! Title: YouTube Anti-Cancer Filter
+! Title: YouTube Anti-Trash Filter
 ! Version: 12September2020v1-Beta
 ! Expires: 2 days
 ! Description: Remember the good old days of YouTube? When it was full of GOOD memes? Yeah that YouTube is long gone. Ever since early 2016, YouTube's recommendation system turned to absolute shit, promoting shitty unboxings, tons and I mean TONS of clickbait, and even worse: pranks. While you can still have a good recommendation if you watch the right channels, you need an account to get one, and there's this paranoia of YouTube tracking us, so as a result, those who want to stay anonymous have to sit through this tourture fest of videos searching for good ones. THIS is why this list was made, to block garbage YT channels and videos, with the least false positives as it can have.
 ! Removes unnecesary stuff
-##ytd-horizontal-card-list-renderer
-##ytd-badge-supported-renderer
-##ytd-rich-section-renderer
+youtube.com##ytd-horizontal-card-list-renderer
+youtube.com##ytd-badge-supported-renderer
+youtube.com##ytd-rich-section-renderer
+youtube.com##ytd-mini-guide-renderer
+! Removes Side Menu Playlists and Subscription List (Can be accessed in library)
+youtube.com###guide-section-title:has-text(Subscriptions):upward(ytd-guide-section-renderer)
+youtube.com##ytd-guide-collapsible-entry-renderer
+! Put that "More from YouTube" somewhere else, since you stuff the important stuff at the BOTTOM.
+youtube.com##ytd-guide-section-renderer:has-text(More from YouTube)
+! For the last time stop pushing us your memberships.
+youtube.com##a#endpoint[href="/paid_memberships"]
+youtube.com###offer-module
+! Just let the user search for god sake...
+youtube.com##iron-selector
+youtube.com##ytd-rich-shelf-renderer
+! Mixes are pointless. Just add an option for their appearance, or remove them.
+youtube.com###video-title-link[href*="start_radio=1"]:upward(ytd-rich-item-renderer):remove()
+youtube.com##ytd-radio-renderer, ytd-compact-radio-renderer
+! Can you remove diming when scrubbing so we can replay stuff easier?
+youtube.com##.ytp-storyboard-framepreview-img:style(opacity: 1 !important)
+youtube.com##.ytp-storyboard-framepreview:style(background: none !important; transition: none !important)
 ! Filtering based on titles.
 ! Reference Regex: /([\d:]+\s*((.?)(A|P)(.?)M(.?))|([$€£元₩₹₽₺฿₪﷼₱][\d,]+)|((.+)to(.+)))/i
 ! Regex List
 ! (vine|(diy|life)(?= hack(s?))|tik(\s*)tok|expose|giveaway|fortnite|unbox|gatcha|gone(?= sexual|wrong)|not(?= clickbait)|nursery(?= rhymes)|(for|with)(?= (kid(s|z)('?)|children|babies))|(kid(s|z)('?)|children|babies)\s*(\w+)|prank|orbeez) - All of these search terms just outright suck. Don't search these.
 ! ([$€£元₩₹₽₺฿₪﷼₱]?[\d,]+) - Filters the $<blank> <blank> trash. 
 ! ([\d:]+\s*((.?)(A|P)(.?)M(.?)) - Removes the 3am videos.
-! ([^abcdefghijklmnopqrstuvwxyz]{3,}) - Should filters out most videos with all cap titles and those with typos.
-youtube.com###video-title:has-text(/([\d:]+\s*((.?)(A|P)(.?)M(.?))|([$€£元₩₹₽₺฿₪﷼₱][\d,]+)|(vine|(diy|life)(?= hack(s?))|tik(\s*)tok|expose|giveaway|fortnite|unbox|gatcha|gone(?= sexual|wrong)|not(?= clickbait)|nursery(?= rhymes)|(for|with)(?= (kid(s|z)('?)|children|babies))|(kid(s|z)('?)|children|babies)\s*(\w+)|prank|orbeez))/i):upward(ytd-compact-video-renderer, ytd-video-renderer, ytd-movie-renderer, ytd-radio-renderer, ytd-rich-item-renderer, ytd-show-renderer, ytd-playlist-renderer):remove()
+! ([ABCDEFGHIJKLMNOPQRSTUVWXYZ]+?[\r\t\f\v !?.,;()<>\[\]\{\}]?){3,} - Should filters out most videos with all cap titles and those with typos.
+youtube.com###video-title:has-text(/([\d:]+\s*((.?)(A|P)(.?)M(.?))|([$€£元₩₹₽₺฿₪﷼₱][\d,]+)|(vine|(diy|life)(?= hack(s?))|tik(\s*)tok|expose|giveaway|fortnite|unbox|gatcha|gone(?= sexual|wrong)|not(?= clickbait)|nursery(?= rhymes)|(for|with)(?= (kid(s|z)('?)|children|babies))|(kid(s|z)('?)|children|babies)\s*(\w+)|prank|orbeez))/i):upward(ytd-compact-video-renderer, ytd-video-renderer, ytd-movie-renderer, ytd-rich-item-renderer, ytd-show-renderer, ytd-playlist-renderer):remove()
 ! Removes all-cap titled videos.
-youtube.com###video-title:has-text(/([ABCDEFGHIJKLMNOPQRSTUVWXYZ]{10,})/):upward(ytd-compact-video-renderer, ytd-video-renderer, ytd-movie-renderer, ytd-radio-renderer, ytd-rich-item-renderer, ytd-show-renderer, ytd-playlist-renderer):remove()
-! Filtering based on channel name
+youtube.com###video-title:has-text(/([ABCDEFGHIJKLMNOPQRSTUVWXYZ]+?[\r\t\f\v !?.,;()<>\[\]\{\}]?){3,}/m):upward(ytd-compact-video-renderer, ytd-video-renderer, ytd-movie-renderer, ytd-rich-item-renderer, ytd-show-renderer, ytd-playlist-renderer):remove()
+! Channel Blacklist
 youtube.com##ytd-channel-name:has-text(/(prank|orbeez|nursery(?= rhymes)|(for|with)(?= (kid(s|z)|children|babies))|(kid(s|z)('?)|children|babies)\s*(\w+))/i):upward(ytd-channel-renderer, ytd-video-renderer):remove()
 ! Filter based on description
-youtube.com###description-text:has-text(/((kid(s|z)('?)|children|babies)\s*(\w+)|prank|orbeez)/i):upward(ytd-video-renderer, ytd-movie-renderer, ytd-radio-renderer, ytd-rich-item-renderer, ytd-show-renderer, ytd-playlist-renderer):remove()
-! Blacklist channels based on username along with reasons for their blacklist.
+youtube.com###description-text:has-text(/((kid(s|z)('?)|children|babies)\s*(\w+)|prank|orbeez)/i):upward(ytd-video-renderer, ytd-movie-renderer, ytd-rich-item-renderer, ytd-show-renderer, ytd-playlist-renderer):remove()
+! Channel Blacklist for channels with too varied and simplified titles to filter that way.
 ! IGN - Their "reviews" are basically just marketing.
-youtube.com##a[href^="/user/IGN" i]:upward(ytd-channel-renderer, ytd-rich-item-renderer, ytd-show-renderer, ytd-playlist-renderer, ytd-video-renderer, ytd-radio-renderer)
+youtube.com##a[href^="/user/IGN" i]:upward(ytd-channel-renderer, ytd-rich-item-renderer, ytd-show-renderer, ytd-playlist-renderer, ytd-video-renderer)
 ! IGN Hungary
-youtube.com##a[href="/channel/UC3UX8a0QJFBvlQ74NCpKTkw"]:upward(ytd-channel-renderer, ytd-rich-item-renderer, ytd-show-renderer, ytd-playlist-renderer, ytd-video-renderer, ytd-radio-renderer)
+youtube.com##a[href="/channel/UC3UX8a0QJFBvlQ74NCpKTkw"]:upward(ytd-channel-renderer, ytd-rich-item-renderer, ytd-show-renderer, ytd-playlist-renderer, ytd-video-renderer)
 ! CNN - King of fake news.
-youtube.com##a[href^="/user/CNN" i]:upward(ytd-channel-renderer, ytd-rich-item-renderer, ytd-show-renderer, ytd-playlist-renderer, ytd-video-renderer, ytd-radio-renderer)
-youtube.com##a[href="/user/HLN" i]:upward(ytd-channel-renderer, ytd-rich-item-renderer, ytd-show-renderer, ytd-playlist-renderer, ytd-video-renderer, ytd-radio-renderer)
-! Jimmy Kimmel and Fallon - Unlikable bastard
-youtube.com##a[href="/user/JimmyKimmelLive" i]:upward(ytd-channel-renderer, ytd-rich-item-renderer, ytd-show-renderer, ytd-playlist-renderer, ytd-video-renderer, ytd-radio-renderer)
-youtube.com##a[href="/c/fallontonight" i]:upward(ytd-channel-renderer, ytd-rich-item-renderer, ytd-show-renderer, ytd-playlist-renderer, ytd-video-renderer, ytd-radio-renderer)
-! Preston - Garbage videos.
-youtube.com##a[href^="/channel/UCmr_vYKbp98f6kdRoer0iVw" i]:upward(ytd-channel-renderer, ytd-rich-item-renderer, ytd-show-renderer, ytd-playlist-renderer, ytd-video-renderer, ytd-radio-renderer)
-youtube.com##a[href^="/channel/UCJZam2u1G0syq3kyqrCXrNw" i]:upward(ytd-channel-renderer, ytd-rich-item-renderer, ytd-show-renderer, ytd-playlist-renderer, ytd-video-renderer, ytd-radio-renderer)
-youtube.com##a[href^="/user/PrestonPlayz" i]:upward(ytd-channel-renderer, ytd-rich-item-renderer, ytd-show-renderer, ytd-playlist-renderer, ytd-video-renderer, ytd-radio-renderer)
-youtube.com##a[href^="/user/TBNRfrags" i]:upward(ytd-channel-renderer, ytd-rich-item-renderer, ytd-show-renderer, ytd-playlist-renderer, ytd-video-renderer, ytd-radio-renderer)
-! Fortnite Channels - Full of clickbait with at best mediocre content.
-youtube.com##a[href="/c/LazarBeam" i]:upward(ytd-channel-renderer, ytd-rich-item-renderer, ytd-show-renderer, ytd-playlist-renderer, ytd-video-renderer, ytd-radio-renderer)
+youtube.com##a[href^="/user/CNN" i]:upward(ytd-channel-renderer, ytd-rich-item-renderer, ytd-show-renderer, ytd-playlist-renderer, ytd-video-renderer)
+youtube.com##a[href="/user/HLN" i]:upward(ytd-channel-renderer, ytd-rich-item-renderer, ytd-show-renderer, ytd-playlist-renderer, ytd-video-renderer)
+! Jimmy Kimmel and Fallon - Unlikable bastards
+youtube.com##a[href="/user/JimmyKimmelLive" i]:upward(ytd-channel-renderer, ytd-rich-item-renderer, ytd-show-renderer, ytd-playlist-renderer, ytd-video-renderer)
+youtube.com##a[href="/c/fallontonight" i]:upward(ytd-channel-renderer, ytd-rich-item-renderer, ytd-show-renderer, ytd-playlist-renderer, ytd-video-renderer)
+! Preston - Kidbait videos.
+youtube.com##a[href^="/channel/UCmr_vYKbp98f6kdRoer0iVw" i]:upward(ytd-channel-renderer, ytd-rich-item-renderer, ytd-show-renderer, ytd-playlist-renderer, ytd-video-renderer)
+youtube.com##a[href^="/channel/UCJZam2u1G0syq3kyqrCXrNw" i]:upward(ytd-channel-renderer, ytd-rich-item-renderer, ytd-show-renderer, ytd-playlist-renderer, ytd-video-renderer)
+youtube.com##a[href^="/user/PrestonPlayz" i]:upward(ytd-channel-renderer, ytd-rich-item-renderer, ytd-show-renderer, ytd-playlist-renderer, ytd-video-renderer)
+youtube.com##a[href^="/user/TBNRfrags" i]:upward(ytd-channel-renderer, ytd-rich-item-renderer, ytd-show-renderer, ytd-playlist-renderer, ytd-video-renderer)
