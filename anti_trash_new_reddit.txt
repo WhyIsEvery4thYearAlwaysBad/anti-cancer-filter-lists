@@ -11,6 +11,9 @@ reddit.com##div[id^="vote-arrows"]
 reddit.com##.Post:style(padding-left: 0 !important)
 reddit.com##.Comment:style(padding-left: 20px !important)
 ! Awards are incorrectly used and a scam.
+reddit.com###COIN_PURCHASE_DROPDOWN_ID
+! TODO: Remove the sidebar entirely. Can be blocked with html filtering of it's script, however that ends up removing the sidebar when viewing subreddits as well. For now, just remove try now popup.
+reddit.com##:xpath(//div[text()="Reddit Premium"]/../../../../..)
 reddit.com##.icon-addGildDashed:upward(div)
 reddit.com##span[id^="PostAwardBadges"]
 reddit.com##button:has-text(Give Award)
@@ -28,7 +31,7 @@ reddit.com##a[href^="/r/SubredditAdoption" i]:upward(2):remove()
 ! r/teenagers - CRINGE.
 ! r/pics - Too broad.
 ! r/mildly<blank> - Lifeless.
-! All the official subreddits
+! All of the official subreddits
 reddit.com##a[data-click-id="subreddit"]:has-text(/politic|news|r\/(pics|mildly|nextfuckinglevel|meme|anime|worldpolitics)/im):upward(.Post):upward(2)
 ||reddit.com/r/worldporn^$document,domain=~ Raided and is now full of porn.
 ! Content blocking
