@@ -1,5 +1,5 @@
 # anti-cancer-filter-lists
-Blacklist cancer (figurative) on sites so you can have an enjoyable experience.
+Blacklist cancer (figurative) on sites so you can have an enjoyable experience. Works for uBlock Origin users only.
 ## Anti-Trash YouTube
 Eliminates trashy videos, channels, and features from the user's feeds, so that the experience is more enjoyable.
 ## Anti-Trash Reddit:
