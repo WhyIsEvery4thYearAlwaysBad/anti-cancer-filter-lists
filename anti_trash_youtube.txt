@@ -1,7 +1,7 @@
 ! Title: Anti-Trash YouTube
 ! Version: 3October2020v1
 ! Expires: 2 days
-! Description: Remember the good old days of YouTube? When it was full of GOOD memes? Yeah that YouTube is long gone. Ever since early 2016, YouTube's recommendation system turned to absolute shit, promoting shitty unboxings, tons and I mean TONS of clickbait, and even worse: pranks. While you can still have a good recommendation if you watch the right channels, you need an account to get one, and there's this paranoia of YouTube tracking us, so as a result, those who want to stay anonymous have to sit through this tourture fest of videos searching for good ones. THIS is why this list was made, to block garbage YT channels and videos, with the least false positives as it can have.
+! Description: Eliminates trash videos, channels, and features from the user's feeds, so that the experience is much more enjoyable.
 ! Removes unnecesary stuff
 youtube.com##ytd-horizontal-card-list-renderer
 youtube.com##ytd-badge-supported-renderer
