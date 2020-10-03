@@ -1,7 +1,7 @@
 ! Title: Anti-Trash Reddit
 ! Version: 3October2020v1
 ! Expires: 3 days
-! Description: A filter list that tries its best to make reddit as good as it can look.
+! Description: Eliminates trash content from reddit, while not infringing the view of the user, so that the experience is more enjoyable.
 ! Pretty sure any trending section on any website is gonna suck.
 reddit.com###TrendingPostsContainer
 ! Up and downvotes are a bad way to rate a post considering how braindead most reddit users are.
@@ -53,7 +53,7 @@ reddit.com##a[href^="/r/SubredditAdoption" i]:upward(2):remove()
 ! r/BanVideoGames(Hate) and r/BigGaming - Karens Vs Bigots.
 reddit.com##.Post:not(:has(div[data-click-id="text"])):has(a[data-click-id="subreddit"]:has-text(/meme|politic|news|r\/(gaming|pics|mildly|nextfuckinglevel|anime|worldpolitics|misfits|okbuddyretard|pyrocynical|im14andthisisdeep|tifu|madlads|4PanelCringe|AmongUs|FemaleDatingStrategy|BanVideoGames|BigGaming)/im))
 ||reddit.com/r/worldporn^$document,domain=~ Raided and is now full of porn.
-! Content blocking
+! Post blacklist.
 ! If you're gonna make memes, at least make good ones.
 reddit.com##a[href*="flair_name" i][href*="meme" i]:upward(.Post):upward(2)
 ! r/gaming
@@ -64,6 +64,3 @@ reddit.com##h3:has-text(/cosplay|him|her|wife|husband|(girl|boy)friend|just\s*(p
 reddit.com##span:has-text(/((can'?t|cannot)?.*(text|voice)?(?= chat).*(unavailable)?)/im):upward(.Post):upward(2)
 ! Loadout posts get old quick.
 reddit.com##a[href="/r/tf2/?f=flair_name%3A%22Loadout%22"]:upward(.Post):upward(2)
-! Comment Blacklist
-! Anything jojo is annoying.
-reddit.com##div[data-test-id="comment"]:has-text(/jojo/im)
