@@ -1,5 +1,5 @@
 ! Title: Anti-Trash Reddit
-! Version: 17September2020v1-Beta
+! Version: 3October2020v1
 ! Expires: 3 days
 ! Description: A filter list that tries its best to make reddit as good as it can look.
 ! Pretty sure any trending section on any website is gonna suck.
@@ -21,6 +21,13 @@ reddit.com##button:has-text(Give Award)
 ||redditstatic.com/*/awards
 ||redd.it/award_images
 ||redditstatic.com/desktop2x/AwardTooltip.*.js
+! Keep functions in consistent areas please. Also don't make favorited subs show TWICE in the dropdown feed as that bloats it's space.
+reddit.com##input[placeholder="Create Post"]:upward(div)
+reddit.com###focus-Settings
+reddit.com###focus-Inbox
+reddit.com##a[href="/rpan/"]:upward(2)
+reddit.com##a[id^="focus-favt"]
+reddit.com##div[role="heading"]:has-text(favorites)
 ! Why not just moderate for a subreddit you like?
 reddit.com##a[href^="/r/SubredditAdoption" i]:upward(2):remove()
 ! Subreddit blacklist.
@@ -31,9 +38,20 @@ reddit.com##a[href^="/r/SubredditAdoption" i]:upward(2):remove()
 ! r/bangtan - Members become Cancer.
 ! r/teenagers - CRINGE.
 ! r/pics - Too broad.
-! r/mildly<blank> - Lifeless.
-! All of the official subreddits
-reddit.com##a[data-click-id="subreddit"]:has-text(/politic|news|r\/(pics|mildly|nextfuckinglevel|meme|anime|worldpolitics)/im):upward(.Post):upward(2)
+! r/mildly<blank> - Too many reposts.
+! r/misfits - Unfunny.
+! r/okbuddyretard - It's very bad. Just trust me on this one.
+! r/pyrocynical - The new okbuddyretard. Also cynical himself is trash.
+! r/im14andthisisdeep - <sarcasm>Woah dirty mops represent shitty lives. Oh wow so philosopical!</sarcasm> Now it's just memes.
+! r/tifu - Sex stories; you can go to deviantart for that.
+! r/madlads - r/publicfreakout v0.1.
+! r/4PanelCringe - It's literally a meme subreddit.
+! r/AmongUs - Quality is dropping at the speed of sound.
+! r/gaming - Half of the posts aren't even about gaming, and when they are, they're just reposts.
+! r/FemaleDatingStrategy - Feminazi-land and female only.
+! r/MGTOW - Quarantined; no need to filter this out.
+! r/BanVideoGames(Hate) and r/BigGaming - Karens Vs Bigots.
+reddit.com##.Post:not(:has(div[data-click-id="text"])):has(a[data-click-id="subreddit"]:has-text(/meme|politic|news|r\/(gaming|pics|mildly|nextfuckinglevel|anime|worldpolitics|misfits|okbuddyretard|pyrocynical|im14andthisisdeep|tifu|madlads|4PanelCringe|AmongUs|FemaleDatingStrategy|BanVideoGames|BigGaming)/im))
 ||reddit.com/r/worldporn^$document,domain=~ Raided and is now full of porn.
 ! Content blocking
 ! If you're gonna make memes, at least make good ones.
