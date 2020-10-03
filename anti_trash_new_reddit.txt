@@ -12,8 +12,9 @@ reddit.com##.Post:style(padding-left: 0 !important)
 reddit.com##.Comment:style(padding-left: 20px !important)
 ! Awards are incorrectly used and a scam.
 reddit.com###COIN_PURCHASE_DROPDOWN_ID
-! TODO: Remove the sidebar entirely. Can be blocked with html filtering of it's script, however that ends up removing the sidebar when viewing subreddits as well. For now, just remove try now popup.
-reddit.com##:xpath(//div[text()="Reddit Premium"]/../../../../..)
+! TODO: Remove the sidebar entirely. Can be blocked with html filtering of the script that generates it. However that ends up removing the sidebar when viewing subreddits as well. For now, just remove try now popup.
+reddit.com##a[href$="/premium"],a[href$="/coins"]
+reddit.com##button:has-text(Try Now):upward(4)
 reddit.com##.icon-addGildDashed:upward(div)
 reddit.com##span[id^="PostAwardBadges"]
 reddit.com##button:has-text(Give Award)
