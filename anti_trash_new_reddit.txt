@@ -26,6 +26,7 @@ reddit.com##input[placeholder="Create Post"]:upward(div)
 reddit.com###focus-Settings
 reddit.com###focus-Inbox
 reddit.com##a[href="/rpan/"]:upward(2)
+reddit.com###create-community-button:upward(4)
 reddit.com##a[id^="focus-favt"]
 reddit.com##div[role="heading"]:has-text(favorites)
 ! Why not just moderate for a subreddit you like?
@@ -48,19 +49,16 @@ reddit.com##a[href^="/r/SubredditAdoption" i]:upward(2):remove()
 ! r/4PanelCringe - It's literally a meme subreddit.
 ! r/AmongUs - Quality is dropping at the speed of sound.
 ! r/gaming - Half of the posts aren't even about gaming, and when they are, they're just reposts.
+! r/gamingcirclejerk - Just as bad as r/gaming.
+! r/fragilewhiteredditor - A lot of users are from r/gamingcirclejerk.
 ! r/FemaleDatingStrategy - Feminazi-land and female only.
 ! r/MGTOW - Quarantined; no need to filter this out.
 ! r/BanVideoGames(Hate) and r/BigGaming - Karens Vs Bigots.
-reddit.com##.Post:not(:has(div[data-click-id="text"])):has(a[data-click-id="subreddit"]:has-text(/meme|politic|news|r\/(gaming|pics|mildly|nextfuckinglevel|anime|worldpolitics|misfits|okbuddyretard|pyrocynical|im14andthisisdeep|tifu|madlads|4PanelCringe|AmongUs|FemaleDatingStrategy|BanVideoGames|BigGaming)/im))
+reddit.com##.Post:not(:has(div[data-click-id="text"])):has(a[data-click-id="subreddit"]:has-text(/meme|politic|news|r\/(gaming|gamingcirclejerk|pics|mildly|nextfuckinglevel|anime|worldpolitics|misfits|okbuddyretard|pyrocynical|im14andthisisdeep|tifu|madlads|4PanelCringe|AmongUs|FemaleDatingStrategy|BanVideoGames|BigGaming)\b/im))
 ||reddit.com/r/worldporn^$document,domain=~ Raided and is now full of porn.
 ! Post blacklist.
 ! If you're gonna make memes, at least make good ones.
 reddit.com##a[href*="flair_name" i][href*="meme" i]:upward(.Post):upward(2)
-! r/gaming
-! No cosplays, girl/boyfriends, or kids! Creeps.
-reddit.com##h3:has-text(/cosplay|him|her|wife|husband|(girl|boy)friend|just\s*(play|got)|found\s*my|unpopular\s*opinion/im):upward(.Post):upward(2)
 ! r/tf2
-! Ok we get it, you hate being censored as a f2p.
-reddit.com##span:has-text(/((can'?t|cannot)?.*(text|voice)?(?= chat).*(unavailable)?)/im):upward(.Post):upward(2)
 ! Loadout posts get old quick.
 reddit.com##a[href="/r/tf2/?f=flair_name%3A%22Loadout%22"]:upward(.Post):upward(2)
