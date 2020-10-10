@@ -3,37 +3,35 @@
 ! Expires: 2 days
 ! Description: Eliminates trash videos, channels, and features from the user's feeds, so that the experience is much more enjoyable.
 ! Removes unnecesary stuff
-youtube.com##ytd-horizontal-card-list-renderer
-youtube.com##ytd-badge-supported-renderer
-youtube.com##ytd-rich-section-renderer
-youtube.com##ytd-mini-guide-renderer
+youtube.com##ytd-horizontal-card-list-renderer, ytd-badge-supported-renderer, ytd-rich-section-renderer, ytd-mini-guide-renderer
 ! Removes Side Menu Playlists and Subscription List (Can be accessed in library)
 youtube.com###guide-section-title:has-text(Subscriptions):upward(ytd-guide-section-renderer)
-youtube.com##ytd-guide-collapsible-entry-renderer
+youtube.com##ytd-guide-collapsible-entry-renderer:has-text(Show more)
 ! Put that "More from YouTube" somewhere else, since you stuff the important stuff at the BOTTOM.
 youtube.com##ytd-guide-section-renderer:has-text(More from YouTube)
 ! For the last time stop pushing us your memberships.
 youtube.com##a#endpoint[href="/paid_memberships"]
 youtube.com###offer-module
 ! Just let the user search for god sake...
-youtube.com##iron-selector
-youtube.com##ytd-rich-shelf-renderer
+youtube.com##iron-selector#chips, ytd-rich-shelf-renderer:has-text(/Latest YouTube posts|Free to watch/i)
 ! Mixes are pointless. Just add an option for their appearance, or remove them.
-youtube.com###video-title-link[href*="start_radio=1"]:upward(ytd-rich-item-renderer):remove()
+youtube.com###video-title-link[href*="start_radio=1"]:upward(ytd-rich-item-renderer)
 youtube.com##ytd-radio-renderer, ytd-compact-radio-renderer
 ! Can you remove diming when scrubbing so we can replay stuff easier?
 youtube.com##.ytp-storyboard-framepreview-img:style(opacity: 1 !important)
 youtube.com##.ytp-storyboard-framepreview:style(background: none !important; transition: none !important)
+! Removes already played videos from user feed; will not remove if on the creator's channel. (Go to history for that.)
+youtube.com##ytd-thumbnail-overlay-resume-playback-renderer:not(:upward(ytd-section-list-renderer[page-subtype="history"], ytd-browse[page-subtype="channels"])):upward(ytd-rich-item-renderer, ytd-compact-video-renderer, ytd-video-renderer, ytd-grid-video-renderer)
 ! Filtering based on titles.
 ! Reference Regex: /([\d:]+\s*((.?)(A|P)(.?)M(.?))|([$€£元₩₹₽₺฿₪﷼₱][\d,]+)|((.+)to(.+)))/i
 ! Regex List
 ! (vine|(diy|life)(?= hack(s?))|tik(\s*)tok|expose|giveaway|fortnite|unbox|gatcha|gone(?= sexual|wrong)|not(?= clickbait)|nursery(?= rhymes)|(for|with)(?= (kid(s|z)('?)|children|babies))|(kid(s|z)('?)|children|babies)\s*(\w+)|prank|orbeez) - All of these search terms just outright suck. Don't search these.
 ! ([$€£元₩₹₽₺฿₪﷼₱]?[\d,]+) - Filters the $<blank> <blank> trash. 
 ! ([\d:]+\s*((.?)(A|P)(.?)M(.?)) - Removes the 3am videos.
-! ([ABCDEFGHIJKLMNOPQRSTUVWXYZ]+?[\r\t\f\v !?.,;()<>\[\]\{\}]?){3,} - Should filters out most videos with all cap titles and those with typos.
+! \b([A-Z\s]{3,}){3,}\b - Filters out videos with ≥3 all-cap words.
 youtube.com###video-title:has-text(/([\d:]+\s*((.?)(A|P)(.?)M(.?))|([$€£元₩₹₽₺฿₪﷼₱][\d,]+)|(vine|(diy|life)(?= hack(s?))|tik(\s*)tok|expose|giveaway|fortnite|unbox|gatcha|gone(?= sexual|wrong)|not(?= clickbait)|nursery(?= rhymes)|(for|with)(?= (kid(s|z)('?)|children|babies))|(kid(s|z)('?)|children|babies)\s*(\w+)|prank|orbeez))/i):upward(ytd-compact-video-renderer, ytd-video-renderer, ytd-movie-renderer, ytd-rich-item-renderer, ytd-show-renderer, ytd-playlist-renderer):remove()
 ! Removes all-cap titled videos.
-youtube.com###video-title:has-text(/([ABCDEFGHIJKLMNOPQRSTUVWXYZ]+?[\r\t\f\v !?.,;()<>\[\]\{\}]?){3,}/m):upward(ytd-compact-video-renderer, ytd-video-renderer, ytd-movie-renderer, ytd-rich-item-renderer, ytd-show-renderer, ytd-playlist-renderer):remove()
+youtube.com###video-title:has-text(/\b([A-Z\s]{3,}){3,}\b/m):upward(ytd-compact-video-renderer, ytd-video-renderer, ytd-movie-renderer, ytd-rich-item-renderer, ytd-show-renderer, ytd-playlist-renderer):remove()
 ! Channel Blacklist
 youtube.com##ytd-channel-name:has-text(/(prank|orbeez|nursery(?= rhymes)|(for|with)(?= (kid(s|z)|children|babies))|(kid(s|z)('?)|children|babies)\s*(\w+))/i):upward(ytd-channel-renderer, ytd-video-renderer):remove()
 ! Filter based on description
