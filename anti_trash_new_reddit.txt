@@ -5,8 +5,8 @@
 ! Pretty sure any trending section on any website is gonna suck.
 reddit.com###TrendingPostsContainer
 ! Up and downvotes are a bad way to rate a post considering how braindead most reddit users are.
-reddit.com##span:has-text(/(\d+) point/i)
-reddit.com##span:has-text(/ upvoted/i)
+reddit.com##.Comment span:has-text(/(\d+) point/i)
+reddit.com##.Comment span:has-text(/ upvoted/i)
 reddit.com##div[id^="vote-arrows"]
 reddit.com##.Post:style(padding-left: 0 !important)
 reddit.com##.Comment:style(padding-left: 20px !important)
@@ -21,7 +21,7 @@ reddit.com##button:has-text(Give Award)
 ||redditstatic.com/*/awards
 ||redd.it/award_images
 ||redditstatic.com/desktop2x/AwardTooltip.*.js
-! Keep functions in consistent areas please. Also don't make favorited subs show TWICE in the dropdown feed as that bloats it's space.
+! Please keep functions in consistent areas, and remove redundant ones. Also don't make favorited subs show TWICE in the dropdown feed as that bloats it's space.
 reddit.com##input[placeholder="Create Post"]:upward(div)
 reddit.com###focus-Settings
 reddit.com###focus-Inbox
@@ -55,7 +55,7 @@ reddit.com##a[href^="/r/SubredditAdoption" i]:upward(2):remove()
 ! r/MGTOW - Quarantined; no need to filter this out.
 ! r/BanVideoGames(Hate) and r/BigGaming - Karens Vs Bigots.
 reddit.com##.Post:not(:has(div[data-click-id="text"])):has(a[data-click-id="subreddit"]:has-text(/meme|politic|news|r\/(gaming|gamingcirclejerk|pics|mildly|nextfuckinglevel|anime|worldpolitics|misfits|okbuddyretard|pyrocynical|im14andthisisdeep|tifu|madlads|4PanelCringe|AmongUs|FemaleDatingStrategy|BanVideoGames|BigGaming)\b/im))
-||reddit.com/r/worldporn^$document,domain=~ Raided and is now full of porn.
+||reddit.com/r/worldpolitics^$document,domain=~ Raided and is now full of porn.
 ! Post blacklist.
 ! If you're gonna make memes, at least make good ones.
 reddit.com##a[href*="flair_name" i][href*="meme" i]:upward(.Post):upward(2)
