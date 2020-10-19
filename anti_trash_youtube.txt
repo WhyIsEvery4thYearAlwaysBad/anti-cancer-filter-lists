@@ -36,7 +36,7 @@ youtube.com###video-title:has-text(/\b([A-Z\s]{3,}){3,}\b/m):upward(ytd-compact-
 youtube.com##ytd-channel-name:has-text(/(prank|orbeez|nursery(?= rhymes)|(for|with)(?= (kid(s|z)|children|babies))|(kid(s|z)('?)|children|babies)\s*(\w+))/i):upward(ytd-channel-renderer, ytd-video-renderer):remove()
 ! Filter based on description
 youtube.com###description-text:has-text(/((kid(s|z)('?)|children|babies)\s*(\w+)|prank|orbeez)/i):upward(ytd-video-renderer, ytd-movie-renderer, ytd-rich-item-renderer, ytd-show-renderer, ytd-playlist-renderer):remove()
-! Channel Blacklist for channels with too varied and simplified titles to filter that way.
+! Channel Blacklist for channels with too varied and simplified titles to filter with regexes.
 ! IGN - Their "reviews" are basically just marketing.
 youtube.com##a[href^="/user/IGN" i]:upward(ytd-channel-renderer, ytd-rich-item-renderer, ytd-show-renderer, ytd-playlist-renderer, ytd-video-renderer)
 ! IGN Hungary
