@@ -12,7 +12,6 @@ reddit.com##.Post:style(padding-left: 0 !important)
 reddit.com##.Comment:style(padding-left: 20px !important)
 ! Awards are incorrectly used and a scam.
 reddit.com###COIN_PURCHASE_DROPDOWN_ID
-! TODO: Remove the sidebar entirely. Can be blocked with html filtering of the script that generates it. However that ends up removing the sidebar when viewing subreddits as well. For now, just remove try now popup.
 reddit.com##a[href$="/premium"],a[href$="/coins"]
 reddit.com##button:has-text(Try Now):upward(4)
 reddit.com##.icon-addGildDashed:upward(div)
@@ -21,6 +20,11 @@ reddit.com##button:has-text(Give Award)
 ||redditstatic.com/*/awards
 ||redd.it/award_images
 ||redditstatic.com/desktop2x/AwardTooltip.*.js
+! Sidebar Elements
+! r/Layer link. (Let users find out for themselves.)
+reddit.com##a[href="/r/Layer"]:upward(2)
+! Subreddit Adoption promo. (Why not just moderate for a subreddit you like?)
+reddit.com##a[href^="/r/SubredditAdoption" i]:upward(2):remove()
 ! Please keep functions in consistent areas, and remove redundant ones. Also don't make favorited subs show TWICE in the dropdown feed as that bloats it's space.
 reddit.com##input[placeholder="Create Post"]:upward(div)
 reddit.com###focus-Settings
@@ -29,8 +33,6 @@ reddit.com##a[href="/rpan/"]:upward(2)
 reddit.com###create-community-button:upward(4)
 reddit.com##a[id^="focus-favt"]
 reddit.com##div[role="heading"]:has-text(favorites)
-! Why not just moderate for a subreddit you like?
-reddit.com##a[href^="/r/SubredditAdoption" i]:upward(2):remove()
 ! Subreddit blacklist.
 ! Anything political or journalistic - A hell storm.
 ! Meme subreddits - Most of them suck.
