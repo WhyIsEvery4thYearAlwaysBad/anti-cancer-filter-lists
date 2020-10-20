@@ -22,7 +22,7 @@ reddit.com##button:has-text(Give Award)
 ||redditstatic.com/desktop2x/AwardTooltip.*.js
 ! Sidebar Elements
 ! r/Layer link. (Let users find out for themselves.)
-reddit.com##a[href="/r/Layer"]:upward(2)
+reddit.com##a[href="https://reddit.com/r/Layer"]:upward(2)
 ! Subreddit Adoption promo. (Why not just moderate for a subreddit you like?)
 reddit.com##a[href^="/r/SubredditAdoption" i]:upward(2):remove()
 ! Please keep functions in consistent areas, and remove redundant ones. Also don't make favorited subs show TWICE in the dropdown feed as that bloats it's space.
