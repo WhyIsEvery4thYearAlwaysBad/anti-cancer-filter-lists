@@ -1,0 +1,11 @@
+! Title: Anti-Scam Internet
+! Version: 19October2020
+! Expires: 3 days
+! Description: Blocks scam sites and remove them from search recommendations to increase the user's security.
+duckduckgo.com##.result__url__domain:has-text(/\b((https:\/\/)?tf2uber.com|tf2blaze.com|tf2.bet)\b/i):upward(.result)
+google.com##cite:has-text(/\b((https:\/\/)?tf2uber.com|tf2blaze.com|tf2.bet)\b)/i):upward(.g)
+! TF2 Gambling Sites
+tf2uber.com
+tf2blaze.com
+tf2.bet
+mannco.trade
