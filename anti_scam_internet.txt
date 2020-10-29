@@ -2,8 +2,8 @@
 ! Version: 19October2020
 ! Expires: 3 days
 ! Description: Blocks scam sites and remove them from search recommendations to increase the user's security.
-duckduckgo.com##.result__url__domain:has-text(/\b((https:\/\/)?futuremoney.net|sankt-max.de|tf2uber.com|tf2blaze.com|tf2.bet|tf2stone.com|scraps.tf|tf2empire.com|tf2hatsgold.fun|eseabattles.com|tf2pan.com|tradeit.gg|unikrn.com|luckbox.com|neo.bet|d2.bet|gskillarena.com|bright-csgo.com|luxury-skins.com|csgo--2xluck.com|csflamy.com|csgotemple.cf|cs-money.work)\b/i):upward(.result)
-google.com##cite:has-text(/\b((https:\/\/)?futuremoney.net|sankt-max.de|tf2uber.com|tf2blaze.com|tf2.bet|tf2stone.com|scraps.tf|tf2empire.com|tf2hatsgold.fun|eseabattles.com|tf2pan.com|tradeit.gg|unikrn.com|luckbox.com|neo.bet|d2.bet|gskillarena.com|bright-csgo.com|luxury-skins.com|csgo--2xluck.com|csflamy.com|csgotemple.cf|cs-money.work)\b/i):upward(.g)
+duckduckgo.com##.result__url__domain:has-text(/\b(futuremoney.net|sankt-max.de|tf2uber.com|tf2blaze.com|tf2.bet|tf2stone.com|scraps.tf|tf2empire.com|tf2hatsgold.fun|eseabattles.com|tf2pan.com|tradeit.gg|unikrn.com|luckbox.com|neo.bet|d2.bet|gskillarena.com|bright-csgo.com|luxury-skins.com|csgo--2xluck.com|csflamy.com|csgotemple.cf|cs-money.work)\b/i):upward(.result)
+google.com##cite:has-text(/\b(futuremoney.net|sankt-max.de|tf2uber.com|tf2blaze.com|tf2.bet|tf2stone.com|scraps.tf|tf2empire.com|tf2hatsgold.fun|eseabattles.com|tf2pan.com|tradeit.gg|unikrn.com|luckbox.com|neo.bet|d2.bet|gskillarena.com|bright-csgo.com|luxury-skins.com|csgo--2xluck.com|csflamy.com|csgotemple.cf|cs-money.work)\b/i):upward(.g)
 ! Gambling
 futuremoney.net
 sankt-max.de
