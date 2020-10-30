@@ -1,0 +1,8 @@
+! Title: Anti-Satirical News
+! Version 30October2020
+! Expires: 2 days
+! Description: Removes satirical sites.
+duckduckgo.com##.result__url__domain:has-text(/\b(ihlayanews.com)\b/):upward(.result)
+google.com##cite:has-text(/\b(ihlayanews.com)\b/):upward(.g)
+! Satire
+ihlayanews.com

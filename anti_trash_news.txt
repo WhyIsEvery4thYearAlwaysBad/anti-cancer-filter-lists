@@ -1,0 +1,21 @@
+! Title: Anti-Trash News
+! Version 30October2020
+! Expires: 2 days
+! Description: Removes news sites known to fake or sensationalize articles from search recommendations. Also removes news sites made from conspiracy theorists.
+duckduckgo.com##.result__url__domain:has-text(/\b(abcnews.com.co|www.globalnea.com|mcmnt.com|www.thewrap.com70news.wordpress.com|82.221.129.208|alternativemediasyndicate.com|bighairynews.com|bostonleader.com|cap-news.com|www.waynemadsenreport.com|cnn.com)\b/):upward(.result)
+google.com##cite:has-text(/\b(abcnews.com.co|www.globalnea.com|mcmnt.com|www.thewrap.com70news.wordpress.com|82.221.129.208|alternativemediasyndicate.com|bighairynews.com|bostonleader.com|cap-news.com|www.waynemadsenreport.com|cnn.com)\b/):upward(.g)
+! Fake news
+abcnews.com.co
+www.globalnea.com
+mcmnt.com
+www.thewrap.com
+70news.wordpress.com
+82.221.129.208
+alternativemediasyndicate.com
+bighairynews.com
+bostonleader.com
+cap-news.com
+! Conspiracy 
+www.waynemadsenreport.com
+! Sensationalizers
+cnn.com
