@@ -17,9 +17,9 @@ www.reddit.com##button:has-text(Try Now):upward(4)
 www.reddit.com##.icon-addGildDashed:upward(div)
 www.reddit.com##span[id^="PostAwardBadges"]
 www.reddit.com##button:has-text(Give Award)
-||redditstatic.com/*/awards
-||redd.it/award_images
-||redditstatic.com/desktop2x/AwardTooltip.*.js
+||redditstatic.com/*/awards,domain=www.reddit.com
+||redd.it/award_images,domain=www.reddit.com
+||redditstatic.com/desktop2x/AwardTooltip.*.js,domain=www.reddit.com
 ! Sidebar Elements
 ! r/Layer link. (Let users find out for themselves.)
 www.reddit.com##a[href="https://reddit.com/r/Layer"]:upward(2)
@@ -57,29 +57,29 @@ www.reddit.com##div[role="heading"]:has-text(favorites)
 ! r/MGTOW - Quarantined; no need to filter this out.
 ! r/BanVideoGames(Hate) and r/BigGaming - Karens Vs Bigots.
 www.reddit.com##.Post:not(:has(div[data-click-id="text"])):has(a[data-click-id="subreddit"]:has-text(/meme|politic|news|r\/(gaming|gamingcirclejerk|pics|mildly|nextfuckinglevel|anime|worldpolitics|misfits|okbuddyretard|pyrocynical|im14andthisisdeep|tifu|madlads|4PanelCringe|AmongUs|FemaleDatingStrategy|BanVideoGames|BigGaming)\b/im))
-||www.reddit.com/r/nextfuckinglevel
-||www.reddit.com/r/anime^$document
-||www.reddit.com/r/worldpolitics^$document
-||www.reddit.com/r/bangtan^$document
-||www.reddit.com/r/teenagers^$document
-||www.reddit.com/r/pics^$document
-||www.reddit.com/r/mildly$document
-||www.reddit.com/r/misfits^$document
-||www.reddit.com/r/okbuddyretard^$document
-||www.reddit.com/r/pyrocynical^$document
-||www.reddit.com/r/im14andthisisdeep^$document
-||www.reddit.com/r/tifu^$document
-||www.reddit.com/r/madlads^$document
-||www.reddit.com/r/4PanelCringe^$document
-||www.reddit.com/r/AmongUs^$document
-||www.reddit.com/r/gaming^$document
-||www.reddit.com/r/gamingcirclejerk^$document
-||www.reddit.com/r/fragilewhiteredditor^$document
-||www.reddit.com/r/FemaleDatingStrategy^$document
-||www.reddit.com/r/MGTOW^$document
-||www.reddit.com/r/BanVideoGames^$document
-||www.reddit.com/r/BanVideoGamesHate^$document
-||www.reddit.com/r/BigGaming^$document
+||www.reddit.com/r/nextfuckinglevel^$document,domain=~Check~the~filter~list
+||www.reddit.com/r/anime^$document,domain=~Check~the~filter~list
+||www.reddit.com/r/worldpolitics^$document,domain=~Check~the~filter~list
+||www.reddit.com/r/bangtan^$document,domain=~Check~the~filter~list
+||www.reddit.com/r/teenagers^$document,domain=~Check~the~filter~list
+||www.reddit.com/r/pics^$document,domain=~Check~the~filter~list
+||www.reddit.com/r/mildly$document,domain=~Check~the~filter~list
+||www.reddit.com/r/misfits^$document,domain=~Check~the~filter~list
+||www.reddit.com/r/okbuddyretard^$document,domain=~Check~the~filter~list
+||www.reddit.com/r/pyrocynical^$document,domain=~Check~the~filter~list
+||www.reddit.com/r/im14andthisisdeep^$document,domain=~Check~the~filter~list
+||www.reddit.com/r/tifu^$document,domain=~Check~the~filter~list
+||www.reddit.com/r/madlads^$document,domain=~Check~the~filter~list
+||www.reddit.com/r/4PanelCringe^$document,domain=~Check~the~filter~list
+||www.reddit.com/r/AmongUs^$document,domain=~Check~the~filter~list
+||www.reddit.com/r/gaming^$document,domain=~Check~the~filter~list
+||www.reddit.com/r/gamingcirclejerk^$document,domain=~Check~the~filter~list
+||www.reddit.com/r/fragilewhiteredditor^$document,domain=~Check~the~filter~list
+||www.reddit.com/r/FemaleDatingStrategy^$document,domain=~Check~the~filter~list
+||www.reddit.com/r/MGTOW^$document,domain=~Check~the~filter~list
+||www.reddit.com/r/BanVideoGames^$document,domain=~Check~the~filter~list
+||www.reddit.com/r/BanVideoGamesHate^$document,domain=~Check~the~filter~list
+||www.reddit.com/r/BigGaming^$document,domain=~Check~the~filter~list
 ! Post blacklist.
 ! If you're gonna make memes, at least make good ones.
 www.reddit.com##a[href*="flair_name" i][href*="meme" i]:upward(.Post):upward(2)
