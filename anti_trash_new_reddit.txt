@@ -1,7 +1,7 @@
 ! Title: Anti-Trash New Reddit
 ! Version: 7November2020v1
 ! Expires: 3 days
-! Description: Eliminates trash content from reddit, while not infringing the view of the user, so that the experience is more enjoyable.
+! Description: Eliminates trash content from new reddit, while not infringing the view of the user, so that the experience is more enjoyable.
 ! Pretty sure any trending section on any website is gonna suck.
 www.reddit.com###TrendingPostsContainer
 ! Up and downvotes are a bad way to rate a post considering how braindead most reddit users are.
