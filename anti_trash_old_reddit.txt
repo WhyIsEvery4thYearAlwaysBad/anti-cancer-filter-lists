@@ -17,7 +17,7 @@ old.reddit.com###adblock-test:remove()
 ! There's a reason people use old reddit.
 old.reddit.com###redesign-beta-optin-btn
 ! Malformed sentence. Nothing useful in it anyways.
-old.reddit.com##.tagline
+old.reddit.com##.thing.subreddit > .tagline
 ! Subreddit blacklist.
 ! Anything political or journalistic - A hell storm.
 ! Meme subreddits - Most of them suck.
