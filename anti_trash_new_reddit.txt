@@ -3,36 +3,36 @@
 ! Expires: 3 days
 ! Description: Eliminates trash content from new reddit, while not infringing the view of the user, so that the experience is more enjoyable.
 ! Pretty sure any trending section on any website is gonna suck.
-www.reddit.com###TrendingPostsContainer
+reddit.com###TrendingPostsContainer
 ! Up and downvotes are a bad way to rate a post considering how braindead most reddit users are.
-www.reddit.com##.Comment span:has-text(/(\d+) point/i)
-www.reddit.com##.Comment span:has-text(/ upvoted/i)
-www.reddit.com##div[id^="vote-arrows"]
-www.reddit.com##.Post:style(padding-left: 0 !important)
-www.reddit.com##.Comment:style(padding-left: 20px !important)
+reddit.com##.Comment span:has-text(/(\d+) point/i)
+reddit.com##.Comment span:has-text(/ upvoted/i)
+reddit.com##div[id^="vote-arrows"]
+reddit.com##.Post:style(padding-left: 0 !important)
+reddit.com##.Comment:style(padding-left: 20px !important)
 ! Awards are incorrectly used and a scam.
-www.reddit.com###COIN_PURCHASE_DROPDOWN_ID
-www.reddit.com##a[href$="/premium"],a[href$="/coins"]
-www.reddit.com##button:has-text(Try Now):upward(4)
-www.reddit.com##.icon-addGildDashed:upward(div)
-www.reddit.com##span[id^="PostAwardBadges"]
-www.reddit.com##button:has-text(Give Award)
-||redditstatic.com/*/awards,domain=www.reddit.com
-||redd.it/award_images,domain=www.reddit.com
-||redditstatic.com/desktop2x/AwardTooltip.*.js,domain=www.reddit.com
+reddit.com###COIN_PURCHASE_DROPDOWN_ID
+reddit.com##a[href$="/premium"],a[href$="/coins"]
+reddit.com##button:has-text(Try Now):upward(4)
+reddit.com##.icon-addGildDashed:upward(div)
+reddit.com##span[id^="PostAwardBadges"]
+reddit.com##button:has-text(Give Award)
+||redditstatic.com/*/awards,domain=reddit.com
+||redd.it/award_images,domain=reddit.com
+||redditstatic.com/desktop2x/AwardTooltip.*.js,domain=reddit.com
 ! Sidebar Elements
 ! r/Layer link. (Let users find out for themselves.)
-www.reddit.com##a[href="https://reddit.com/r/Layer"]:upward(2)
+reddit.com##a[href="https://reddit.com/r/Layer"]:upward(2)
 ! Subreddit Adoption promo. (Why not just moderate for a subreddit you like?)
-www.reddit.com##a[href^="/r/SubredditAdoption" i]:upward(2):remove()
+reddit.com##a[href^="/r/SubredditAdoption" i]:upward(2):remove()
 ! Please keep functions in consistent areas, and remove redundant ones. Also don't make favorited subs show TWICE in the dropdown feed as that bloats it's space.
-www.reddit.com##input[placeholder="Create Post"]:upward(div)
-www.reddit.com###focus-Settings
-www.reddit.com###focus-Inbox
-www.reddit.com##a[href="/rpan/"]:upward(2)
-www.reddit.com###create-community-button:upward(4)
-www.reddit.com##a[id^="focus-favt"]
-www.reddit.com##div[role="heading"]:has-text(favorites)
+reddit.com##input[placeholder="Create Post"]:upward(div)
+reddit.com###focus-Settings
+reddit.com###focus-Inbox
+reddit.com##a[href="/rpan/"]:upward(2)
+reddit.com###create-community-button:upward(4)
+reddit.com##a[id^="focus-favt"]
+reddit.com##div[role="heading"]:has-text(favorites)
 ! Subreddit blacklist.
 ! Anything political or journalistic - A hell storm.
 ! Meme subreddits - Most of them suck.
@@ -56,33 +56,33 @@ www.reddit.com##div[role="heading"]:has-text(favorites)
 ! r/FemaleDatingStrategy - Feminazi-land and female only.
 ! r/MGTOW - Quarantined; no need to filter this out.
 ! r/BanVideoGames(Hate) and r/BigGaming - Karens Vs Bigots.
-www.reddit.com##.Post:not(:has(div[data-click-id="text"])):has(a[data-click-id="subreddit"]:has-text(/meme|politic|news|r\/(gaming|gamingcirclejerk|pics|mildly|nextfuckinglevel|anime|worldpolitics|misfits|okbuddyretard|pyrocynical|im14andthisisdeep|tifu|madlads|4PanelCringe|AmongUs|FemaleDatingStrategy|BanVideoGames|BigGaming)\b/im))
-||www.reddit.com/r/nextfuckinglevel^$document,domain=~Check~the~filter~list
-||www.reddit.com/r/anime^$document,domain=~Check~the~filter~list
-||www.reddit.com/r/worldpolitics^$document,domain=~Check~the~filter~list
-||www.reddit.com/r/bangtan^$document,domain=~Check~the~filter~list
-||www.reddit.com/r/teenagers^$document,domain=~Check~the~filter~list
-||www.reddit.com/r/pics^$document,domain=~Check~the~filter~list
-||www.reddit.com/r/mildly$document,domain=~Check~the~filter~list
-||www.reddit.com/r/misfits^$document,domain=~Check~the~filter~list
-||www.reddit.com/r/okbuddyretard^$document,domain=~Check~the~filter~list
-||www.reddit.com/r/pyrocynical^$document,domain=~Check~the~filter~list
-||www.reddit.com/r/im14andthisisdeep^$document,domain=~Check~the~filter~list
-||www.reddit.com/r/tifu^$document,domain=~Check~the~filter~list
-||www.reddit.com/r/madlads^$document,domain=~Check~the~filter~list
-||www.reddit.com/r/4PanelCringe^$document,domain=~Check~the~filter~list
-||www.reddit.com/r/AmongUs^$document,domain=~Check~the~filter~list
-||www.reddit.com/r/gaming^$document,domain=~Check~the~filter~list
-||www.reddit.com/r/gamingcirclejerk^$document,domain=~Check~the~filter~list
-||www.reddit.com/r/fragilewhiteredditor^$document,domain=~Check~the~filter~list
-||www.reddit.com/r/FemaleDatingStrategy^$document,domain=~Check~the~filter~list
-||www.reddit.com/r/MGTOW^$document,domain=~Check~the~filter~list
-||www.reddit.com/r/BanVideoGames^$document,domain=~Check~the~filter~list
-||www.reddit.com/r/BanVideoGamesHate^$document,domain=~Check~the~filter~list
-||www.reddit.com/r/BigGaming^$document,domain=~Check~the~filter~list
+reddit.com##.Post:not(:has(div[data-click-id="text"])):has(a[data-click-id="subreddit"]:has-text(/meme|politic|news|r\/(gaming|gamingcirclejerk|pics|mildly|nextfuckinglevel|anime|worldpolitics|misfits|okbuddyretard|pyrocynical|im14andthisisdeep|tifu|madlads|4PanelCringe|AmongUs|FemaleDatingStrategy|BanVideoGames|BigGaming)\b/im))
+||reddit.com/r/nextfuckinglevel^$document,domain=~Check~the~filter~list
+||reddit.com/r/anime^$document,domain=~Check~the~filter~list
+||reddit.com/r/worldpolitics^$document,domain=~Check~the~filter~list
+||reddit.com/r/bangtan^$document,domain=~Check~the~filter~list
+||reddit.com/r/teenagers^$document,domain=~Check~the~filter~list
+||reddit.com/r/pics^$document,domain=~Check~the~filter~list
+||reddit.com/r/mildly$document,domain=~Check~the~filter~list
+||reddit.com/r/misfits^$document,domain=~Check~the~filter~list
+||reddit.com/r/okbuddyretard^$document,domain=~Check~the~filter~list
+||reddit.com/r/pyrocynical^$document,domain=~Check~the~filter~list
+||reddit.com/r/im14andthisisdeep^$document,domain=~Check~the~filter~list
+||reddit.com/r/tifu^$document,domain=~Check~the~filter~list
+||reddit.com/r/madlads^$document,domain=~Check~the~filter~list
+||reddit.com/r/4PanelCringe^$document,domain=~Check~the~filter~list
+||reddit.com/r/AmongUs^$document,domain=~Check~the~filter~list
+||reddit.com/r/gaming^$document,domain=~Check~the~filter~list
+||reddit.com/r/gamingcirclejerk^$document,domain=~Check~the~filter~list
+||reddit.com/r/fragilewhiteredditor^$document,domain=~Check~the~filter~list
+||reddit.com/r/FemaleDatingStrategy^$document,domain=~Check~the~filter~list
+||reddit.com/r/MGTOW^$document,domain=~Check~the~filter~list
+||reddit.com/r/BanVideoGames^$document,domain=~Check~the~filter~list
+||reddit.com/r/BanVideoGamesHate^$document,domain=~Check~the~filter~list
+||reddit.com/r/BigGaming^$document,domain=~Check~the~filter~list
 ! Post blacklist.
 ! If you're gonna make memes, at least make good ones.
-www.reddit.com##a[href*="flair_name" i][href*="meme" i]:upward(.Post):upward(2)
+reddit.com##a[href*="flair_name" i][href*="meme" i]:upward(.Post):upward(2)
 ! r/tf2
 ! Loadout posts get old quick.
-www.reddit.com##a[href="/r/tf2/?f=flair_name%3A%22Loadout%22"]:upward(.Post):upward(2)
+reddit.com##a[href="/r/tf2/?f=flair_name%3A%22Loadout%22"]:upward(.Post):upward(2)

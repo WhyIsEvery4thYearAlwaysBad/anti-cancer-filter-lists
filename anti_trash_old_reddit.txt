@@ -3,21 +3,21 @@
 ! Expires: 3 days
 ! Description: Eliminates trash content from old reddit, while not infringing the view of the user, so that the experience is more enjoyable. 
 ! Up and downvotes are a bad way to rate a post considering how braindead most reddit users are.
-old.reddit.com##.score, .search-result-icon-score, .search-score
-old.reddit.com##.arrow:upward(.midcol)
+reddit.com##.score, .search-result-icon-score, .search-score
+reddit.com##.arrow:upward(.midcol)
 ! Awards are incorrectly used and a scam.
-old.reddit.com##.give-gold-button
-old.reddit.com##.buygold
-old.reddit.com##.awardings-bar
-||redditstatic.com/*/awards,domain=old.reddit.com
-||redd.it/award_images,domain=old.reddit.com
-||redditstatic.com/desktop2x/AwardTooltip.*.js,domain=old.reddit.com
+reddit.com##.give-gold-button
+reddit.com##.buygold
+reddit.com##.awardings-bar
+||redditstatic.com/*/awards,domain=reddit.com
+||redd.it/award_images,domain=reddit.com
+||redditstatic.com/desktop2x/AwardTooltip.*.js,domain=reddit.com
 ! Nope!
-old.reddit.com###adblock-test:remove()
+reddit.com###adblock-test:remove()
 ! There's a reason people use old reddit.
-old.reddit.com###redesign-beta-optin-btn
+reddit.com###redesign-beta-optin-btn
 ! Malformed sentence. Nothing useful in it anyways.
-old.reddit.com##.thing.subreddit > .tagline
+reddit.com##.thing.subreddit > .tagline
 ! Subreddit blacklist.
 ! Anything political or journalistic - A hell storm.
 ! Meme subreddits - Most of them suck.
@@ -41,33 +41,33 @@ old.reddit.com##.thing.subreddit > .tagline
 ! r/FemaleDatingStrategy - Feminazi-land and female only.
 ! r/MGTOW - Quarantined; no need to filter this out.
 ! r/BanVideoGames(Hate) and r/BigGaming - Karens Vs Bigots.
-old.reddit.com##.search-result:has(.search-subreddit-link:has-text(/meme|politic|news|r\/(gaming|gamingcirclejerk|pics|mildly|nextfuckinglevel|anime|worldpolitics|misfits|okbuddyretard|pyrocynical|im14andthisisdeep|tifu|madlads|4PanelCringe|AmongUs|FemaleDatingStrategy|BanVideoGames|BigGaming)\b/im))
-||old.reddit.com/r/nextfuckinglevel^$document,domain=~Check~the~filter~list
-||old.reddit.com/r/anime^$document,domain=~Check~the~filter~list
-||old.reddit.com/r/worldpolitics^$document,domain=~Check~the~filter~list
-||old.reddit.com/r/bangtan^$document,domain=~Check~the~filter~list
-||old.reddit.com/r/teenagers^$document,domain=~Check~the~filter~list
-||old.reddit.com/r/pics^$document,domain=~Check~the~filter~list
-||old.reddit.com/r/mildly$document,domain=~Check~the~filter~list
-||old.reddit.com/r/misfits^$document,domain=~Check~the~filter~list
-||old.reddit.com/r/okbuddyretard^$document,domain=~Check~the~filter~list
-||old.reddit.com/r/pyrocynical^$document,domain=~Check~the~filter~list
-||old.reddit.com/r/im14andthisisdeep^$document,domain=~Check~the~filter~list
-||old.reddit.com/r/tifu^$document,domain=~Check~the~filter~list
-||old.reddit.com/r/madlads^$document,domain=~Check~the~filter~list
-||old.reddit.com/r/4PanelCringe^$document,domain=~Check~the~filter~list
-||old.reddit.com/r/AmongUs^$document,domain=~Check~the~filter~list
-||old.reddit.com/r/gaming^$document,domain=~Check~the~filter~list
-||old.reddit.com/r/gamingcirclejerk^$document,domain=~Check~the~filter~list
-||old.reddit.com/r/fragilewhiteredditor^$document,domain=~Check~the~filter~list
-||old.reddit.com/r/FemaleDatingStrategy^$document,domain=~Check~the~filter~list
-||old.reddit.com/r/MGTOW^$document,domain=~Check~the~filter~list
-||old.reddit.com/r/BanVideoGames^$document,domain=~Check~the~filter~list
-||old.reddit.com/r/BanVideoGamesHate^$document,domain=~Check~the~filter~list
-||old.reddit.com/r/BigGaming^$document,domain=~Check~the~filter~list
+reddit.com##.search-result:has(.search-subreddit-link:has-text(/meme|politic|news|r\/(gaming|gamingcirclejerk|pics|mildly|nextfuckinglevel|anime|worldpolitics|misfits|okbuddyretard|pyrocynical|im14andthisisdeep|tifu|madlads|4PanelCringe|AmongUs|FemaleDatingStrategy|BanVideoGames|BigGaming)\b/im))
+||reddit.com/r/nextfuckinglevel^$document,domain=~Check~the~filter~list
+||reddit.com/r/anime^$document,domain=~Check~the~filter~list
+||reddit.com/r/worldpolitics^$document,domain=~Check~the~filter~list
+||reddit.com/r/bangtan^$document,domain=~Check~the~filter~list
+||reddit.com/r/teenagers^$document,domain=~Check~the~filter~list
+||reddit.com/r/pics^$document,domain=~Check~the~filter~list
+||reddit.com/r/mildly$document,domain=~Check~the~filter~list
+||reddit.com/r/misfits^$document,domain=~Check~the~filter~list
+||reddit.com/r/okbuddyretard^$document,domain=~Check~the~filter~list
+||reddit.com/r/pyrocynical^$document,domain=~Check~the~filter~list
+||reddit.com/r/im14andthisisdeep^$document,domain=~Check~the~filter~list
+||reddit.com/r/tifu^$document,domain=~Check~the~filter~list
+||reddit.com/r/madlads^$document,domain=~Check~the~filter~list
+||reddit.com/r/4PanelCringe^$document,domain=~Check~the~filter~list
+||reddit.com/r/AmongUs^$document,domain=~Check~the~filter~list
+||reddit.com/r/gaming^$document,domain=~Check~the~filter~list
+||reddit.com/r/gamingcirclejerk^$document,domain=~Check~the~filter~list
+||reddit.com/r/fragilewhiteredditor^$document,domain=~Check~the~filter~list
+||reddit.com/r/FemaleDatingStrategy^$document,domain=~Check~the~filter~list
+||reddit.com/r/MGTOW^$document,domain=~Check~the~filter~list
+||reddit.com/r/BanVideoGames^$document,domain=~Check~the~filter~list
+||reddit.com/r/BanVideoGamesHate^$document,domain=~Check~the~filter~list
+||reddit.com/r/BigGaming^$document,domain=~Check~the~filter~list
 ! Post blacklist.
 ! If you're gonna make memes, at least make good ones.
-old.reddit.com##.linkflairlabel:has-text(/meme/i):upward(.link)
+reddit.com##.linkflairlabel:has-text(/meme/i):upward(.link)
 ! r/tf2
 ! Loadout posts get old quick.
-old.reddit.com##.linkflairlabel:has-text(Loadout):upward(.link)
+reddit.com##.linkflairlabel:has-text(Loadout):upward(.link)
