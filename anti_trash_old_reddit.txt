@@ -67,7 +67,4 @@ reddit.com##.search-result:has(.search-subreddit-link:has-text(/meme|politic|new
 ||reddit.com/r/BigGaming^$document,domain=~Check~the~filter~list
 ! Post blacklist.
 ! If you're gonna make memes, at least make good ones.
-reddit.com##.linkflairlabel:has-text(/meme/i):upward(.link)
-! r/tf2
-! Loadout posts get old quick.
-reddit.com##.linkflairlabel:has-text(Loadout):upward(.link)
+reddit.com##.linkflairlabel:has-text(/meme/i):upward(.link):not(:has(.flairselectbtn))
