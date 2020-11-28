@@ -1,5 +1,5 @@
 ! Title: Anti-Trash YouTube
-! Version: 3October2020v1
+! Version: 27November2020v1
 ! Expires: 2 days
 ! Description: Eliminates trash videos, channels, and features from the user's feeds, so that the experience is much more enjoyable.
 ! Removes unnecesary stuff
@@ -34,7 +34,7 @@ youtube.com###video-title:has-text(/([\d:]+\s*((.?)(A|P)(.?)M(.?))|([$€£元�
 ! Removes all-cap titled videos.
 youtube.com###video-title:has-text(/\b([A-Z\s]{3,}){3,}\b/m):upward(ytd-compact-video-renderer, ytd-video-renderer, ytd-movie-renderer, ytd-rich-item-renderer, ytd-show-renderer, ytd-playlist-renderer):remove()
 ! Channel Blacklist
-youtube.com##ytd-channel-name:has-text(/(prank|orbeez|nursery(?= rhymes)|(for|with)(?= (kid(s|z)|children|babies))|(kid(s|z)('?)|children|babies)\s*(\w+))/i):upward(ytd-channel-renderer, ytd-video-renderer):remove()
+youtube.com##ytd-channel-name:has-text(/(prank|orbeez|nursery(?= rhymes)|(for|with)(?= (kid(s|z)?|toddler(s?)|children|babies))|(kid(s|z)('?)|children|babies)\s*(\w+))/i):upward(ytd-channel-renderer, ytd-video-renderer):remove()
 ! Filter based on description
 youtube.com###description-text:has-text(/((kid(s|z)('?)|children|babies)\s*(\w+)|prank|orbeez)/i):upward(ytd-video-renderer, ytd-movie-renderer, ytd-rich-item-renderer, ytd-show-renderer, ytd-playlist-renderer):remove()
 ! Channel Blacklist for channels with too varied and simplified titles to filter with regexes.
