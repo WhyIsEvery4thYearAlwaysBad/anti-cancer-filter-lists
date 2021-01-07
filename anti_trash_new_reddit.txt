@@ -56,7 +56,7 @@ reddit.com##div[role="heading"]:has-text(favorites)
 ! r/FemaleDatingStrategy - Feminazi-land and female only.
 ! r/MGTOW - Quarantined; no need to filter this out.
 ! r/BanVideoGames(Hate) and r/BigGaming - Karens Vs Bigots.
-reddit.com##.Post:not(:has(div[data-click-id="text"])):has(a[data-click-id="subreddit"]:has-text(/meme|politic|news|r\/(gaming|gamingcirclejerk|pics|mildly|nextfuckinglevel|anime|worldpolitics|misfits|okbuddyretard|pyrocynical|im14andthisisdeep|tifu|madlads|4PanelCringe|AmongUs|FemaleDatingStrategy|BanVideoGames|BigGaming)\b/im))
+reddit.com##.Post:not(:has(div[data-click-id="text"])):has(a[data-click-id="subreddit"]:has-text(/meme|politic|news|r\/(gaming|gamingcirclejerk|pics|mildly|nextfuckinglevel|anime|worldpolitics|misfits|okbuddyretard|pyrocynical|im14andthisisdeep|tifu|madlads|4PanelCringe|AmongUs|FemaleDatingStrategy|BanVideoGames|BigGaming|donaldtrump|the_donald)\b/im))
 ||reddit.com/r/nextfuckinglevel^$document,domain=~Check~the~filter~list
 ||reddit.com/r/anime^$document,domain=~Check~the~filter~list
 ||reddit.com/r/worldpolitics^$document,domain=~Check~the~filter~list
@@ -80,6 +80,10 @@ reddit.com##.Post:not(:has(div[data-click-id="text"])):has(a[data-click-id="subr
 ||reddit.com/r/BanVideoGames^$document,domain=~Check~the~filter~list
 ||reddit.com/r/BanVideoGamesHate^$document,domain=~Check~the~filter~list
 ||reddit.com/r/BigGaming^$document,domain=~Check~the~filter~list
+||reddit.com/r/politics^$document,domain=~Check~the~filter~list
+||reddit.com/r/uspolitics^$document,domain=~Check~the~filter~list
+||reddit.com/r/donaldtrump^$document,domain=~Check~the~filter~list
+||reddit.com/r/the_donald^$document,domain=~Check~the~filter~list
 ! Post blacklist.
 ! If you're gonna make memes, at least make good ones.
 reddit.com##a[href*="flair_name" i][href*="meme" i]:upward(.Post):upward(2)

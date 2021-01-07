@@ -41,7 +41,7 @@ reddit.com##.thing.subreddit > .tagline
 ! r/FemaleDatingStrategy - Feminazi-land and female only.
 ! r/MGTOW - Quarantined; no need to filter this out.
 ! r/BanVideoGames(Hate) and r/BigGaming - Karens Vs Bigots.
-reddit.com##.search-result:has(.search-subreddit-link:has-text(/meme|politic|news|r\/(gaming|gamingcirclejerk|pics|mildly|nextfuckinglevel|anime|worldpolitics|misfits|okbuddyretard|pyrocynical|im14andthisisdeep|tifu|madlads|4PanelCringe|AmongUs|FemaleDatingStrategy|BanVideoGames|BigGaming)\b/im))
+reddit.com##.search-result:has(.search-subreddit-link:has-text(/meme|politic|news|r\/(gaming|gamingcirclejerk|pics|mildly|nextfuckinglevel|anime|worldpolitics|misfits|okbuddyretard|pyrocynical|im14andthisisdeep|tifu|madlads|4PanelCringe|AmongUs|FemaleDatingStrategy|BanVideoGames|BigGaming|donaldtrump|the_donald)\b/im))
 ||reddit.com/r/nextfuckinglevel^$document,domain=~Check~the~filter~list
 ||reddit.com/r/anime^$document,domain=~Check~the~filter~list
 ||reddit.com/r/worldpolitics^$document,domain=~Check~the~filter~list
@@ -65,6 +65,10 @@ reddit.com##.search-result:has(.search-subreddit-link:has-text(/meme|politic|new
 ||reddit.com/r/BanVideoGames^$document,domain=~Check~the~filter~list
 ||reddit.com/r/BanVideoGamesHate^$document,domain=~Check~the~filter~list
 ||reddit.com/r/BigGaming^$document,domain=~Check~the~filter~list
+||reddit.com/r/politics^$document,domain=~Check~the~filter~list
+||reddit.com/r/uspolitics^$document,domain=~Check~the~filter~list
+||reddit.com/r/donaldtrump^$document,domain=~Check~the~filter~list
+||reddit.com/r/the_donald^$document,domain=~Check~the~filter~list
 ! Post blacklist.
 ! If you're gonna make memes, at least make good ones.
 reddit.com##.linkflairlabel:has-text(/meme/i):upward(.link):not(:has(.flairselectbtn))
